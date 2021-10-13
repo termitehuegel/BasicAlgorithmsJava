@@ -10,7 +10,13 @@ public class ParallelQuicksort<T extends Comparable<T>> extends Thread{
     private final int end;
 
     public ParallelQuicksort(T[] array) {
-        this(array, 0, array.length-1);
+        this.array = array;
+        begin = 0;
+        if (array != null) {
+            end = array.length-1;
+        } else {
+            end = -1;
+        }
     }
 
     public ParallelQuicksort(T[] array, int begin, int end) {
@@ -30,8 +36,8 @@ public class ParallelQuicksort<T extends Comparable<T>> extends Thread{
     }
 
     private void sort() throws InterruptedException {
-        //finished if less than 2 Elements need to be sorted (-> 1 or 0)
-        if (begin < end) {
+        //finished if less than 2 Elements need to be sorted (-> 1 or 0) and nullcheck
+        if (array != null && begin < end) {
             //get position of a pivot and sort the rest left if it's lower and right if it's bigger
             int pivotIndex = findPivot();
 
