@@ -8,6 +8,7 @@ public class Quicksort implements SortingAlgorithm{
 
     @Override
     public <T extends Comparable<T>> void sort(T[] array) {
+        //nullcheck
         if (array == null) {
             return;
         }
@@ -54,6 +55,7 @@ public class Quicksort implements SortingAlgorithm{
 
     @Override
     public void sort(int[] array) {
+        //nullcheck
         if (array == null) {
             return;
         }

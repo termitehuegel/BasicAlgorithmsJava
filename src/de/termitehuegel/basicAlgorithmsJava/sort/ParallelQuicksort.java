@@ -12,6 +12,7 @@ public class ParallelQuicksort<T extends Comparable<T>> extends Thread{
     public ParallelQuicksort(T[] array) {
         this.array = array;
         begin = 0;
+        //nullcheck
         if (array != null) {
             end = array.length-1;
         } else {
@@ -30,7 +31,7 @@ public class ParallelQuicksort<T extends Comparable<T>> extends Thread{
         super.run();
         try {
             sort();
-        } catch (Exception e ) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -47,6 +48,7 @@ public class ParallelQuicksort<T extends Comparable<T>> extends Thread{
             //Sort everything bigger than the last Pivot
             ParallelQuicksort<T> high = new ParallelQuicksort<>(array, pivotIndex+1, end);
             high.start();
+            //waits for completion
             low.join();
             high.join();
         }
