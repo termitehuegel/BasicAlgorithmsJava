@@ -7,6 +7,10 @@ public class Bubblesort implements SortingAlgorithm{
 
     @Override
     public <T extends Comparable<T>> void sort(T[] array) {
+        //nullcheck
+        if (array == null) {
+            return;
+        }
         //for every element
         for (int i=0; i<array.length; i++) {
             //for every element besides the already sorted
@@ -24,6 +28,10 @@ public class Bubblesort implements SortingAlgorithm{
 
     @Override
     public void sort(int[] array) {
+        //nullcheck
+        if (array == null) {
+            return;
+        }
         //for every element
         for (int i=0; i<array.length; i++) {
             //for every element besides the already sorted
