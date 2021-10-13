@@ -1,5 +1,7 @@
 package de.termitehuegel.basicAlgorithmsJava.sort;
 
+import java.util.Arrays;
+
 /**
  * @author termitehuegel
  */
@@ -16,24 +18,27 @@ public class Selectionsort implements SortingAlgorithm{
             int min = i;
             int max = i;
             //find the maximum and minimum value in the unsorted part
-            for (int j=i+1; j<array.length; j++) {
+            for (int j=i+1; j<array.length-i; j++) {
                 if (array[min].compareTo(array[j]) > 0) {
                     min = j;
                 } else if (array[max].compareTo(array[j]) < 0) {
                     max = j;
                 }
             }
+            if (i == max) {
+                max = min;
+            }
             //swap the smallest element with the i-th element
             //the smallest element is now part of the sorted part
             T temp = array[min];
-            array[i] = array[min];
-            array[min] = temp;
+            array[min] = array[i];
+            array[i] = temp;
 
             //swap the largest element with the i-th element form the end
             //the largest element is now part of the sorted part
             temp = array[max];
-            array[array.length-1-i] = array[max];
-            array[max] = temp;
+            array[max] = array[array.length-1-i];
+            array[array.length-1-i] = temp;
         }
     }
 
@@ -48,24 +53,27 @@ public class Selectionsort implements SortingAlgorithm{
             int min = i;
             int max = i;
             //find the maximum and minimum value in the unsorted part
-            for (int j=i+1; j<array.length; j++) {
+            for (int j=i+1; j<array.length-i; j++) {
                 if (array[min] > array[j]) {
                     min = j;
                 } else if (array[max] < array[j]) {
                     max = j;
                 }
             }
+
+            if (i == max) {
+                max = min;
+            }
             //swap the smallest element with the i-th element
             //the smallest element is now part of the sorted part
             int temp = array[min];
-            array[i] = array[min];
-            array[min] = temp;
-
+            array[min] = array[i];
+            array[i] = temp;
             //swap the largest element with the i-th element form the end
             //the largest element is now part of the sorted part
             temp = array[max];
-            array[array.length-1-i] = array[max];
-            array[max] = temp;
+            array[max] = array[array.length-1-i];
+            array[array.length-1-i] = temp;
         }
     }
 }
