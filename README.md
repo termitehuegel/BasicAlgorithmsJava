@@ -8,3 +8,7 @@ Bubble sort works by iterating through the array and always comparing two elemen
 Insertions sort works by divideing the array in two parts. The sorted part and a not sorted part. In the beginning the sorted part just contains the first element of the array. Now for every following element all elements, that are in the sorted part of the arreay and are larger get shifed right. Now the element gets inserted in the sorted part.
 #### [Selection Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Selectionsort.java)
 Selection sort works by iterating trough the array and finding the smallest/largest or both element. These elements get shifted to the beginning/end of the part of the array that is to be sorted.
+#### [Parallel Quick Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/ParallelQuicksort.java)
+Parallel quick sort is a implementation of quick sort that relies on multithreading. Each recursive call of quick sort thereby opens a new Thread.
+#### [Quick Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Quicksort.java)
+Quick sort use the divide and conquer aproach. The Array is split in two: The elements smaller than the pivot and the elements larger than the pivot. These array parts are sorted again in a recursive style. If an array is empty or only contains one element it is already sorted.
