@@ -1,7 +1,7 @@
 # BasicAlgorithmsJava
 This repository will contain all sorts of different algorithms as a Java implementation.
 ## Content
-###Math
+### Math
 #### [Advanced Euclidean Algorithm](/src/de/termitehuegel/basicAlgorithmsJava/math/numberTheory/AdvancedEuclideanAlgorithm.java)
 The advanced euclidean algorithm is used to solve diophantine equations of the following form: `s*a+t*b=ggT(a, b)` with known `a` and `b`. The algorithm like the euclidean algorithm but at the end each row is solved for t with s being the t from the next row. The last row has the form `a=ggT(a, b)`, `b=0`, `s=1`, `t=0`.
 #### [Euclidean Algorithm](/src/de/termitehuegel/basicAlgorithmsJava/math/numberTheory/EuclideanAlgorithm.java)
