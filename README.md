@@ -2,8 +2,10 @@
 This repository will contain all sorts of different algorithms as a Java implementation.
 ## Content
 ###Math
-#### [Euclidean Algorithm](/src/de/termitehuegel/basicAlgorithmsJava/math/EuclideanAlgorithm.java)
-The euclidean Algorithm is used to calculate the largest common divisor of a and b. a and b therefore need to be positive integers. The functionality of the euclidean algorithm is very simple. If b is 0 than a is the largest common divisor. Else the largest common divisor is the same as the largest common divisor of b and a modulo b. This largest common divisor can be calculated with the euclidean algorithm.
+#### [Advanced Euclidean Algorithm](/src/de/termitehuegel/basicAlgorithmsJava/math/numberTheory/AdvancedEuclideanAlgorithm.java)
+The advanced euclidean algorithm is used to solve diophantine equations of the following form: `s*a+t*b=ggT(a, b)` with known `a` and `b`. The algorithm like the euclidean algorithm but at the end each row is solved for t with s being the t from the next row. The last row has the form `a=ggT(a, b)`, `b=0`, `s=1`, `t=0`.
+#### [Euclidean Algorithm](/src/de/termitehuegel/basicAlgorithmsJava/math/numberTheory/EuclideanAlgorithm.java)
+The euclidean Algorithm is used to calculate the largest common divisor of `a` and `b`. a and b therefore need to be positive integers. The functionality of the euclidean algorithm is very simple. If `b` is 0 than `a` is the largest common divisor. Else the largest common divisor is the same as the largest common divisor of `b` and `a` modulo `b`. This largest common divisor can be calculated with the euclidean algorithm.
 ##### [Vector](/src/de/termitehuegel/basicAlgorithmsJava/math/geometry/Vector.java)
 Vectors are used to describe a displacement in space. A vector allows for all kinds of operations.
 ### Sorting Algorithms
