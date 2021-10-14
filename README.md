@@ -20,6 +20,6 @@ Merge sort works by dividing and conquering. Firstly the array is split in two. 
 #### [Selection Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Selectionsort.java)
 Selection sort works by iterating through the array and finding the smallest/largest or both element. These elements get shifted to the beginning/end of the part of the array that is to be sorted.
 #### [Parallel Quick Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/ParallelQuicksort.java)
-Parallel quick sort is a implementation of quick sort that relies on multithreading. Each recursive call of quick sort thereby opens a new Thread.
+Parallel quick sort is an implementation of quick sort that relies on multithreading. Each recursive call of quick sort thereby opens a new Thread.
 #### [Quick Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Quicksort.java)
 Quick sort use the divide and conquer approach. The Array is split in two: The elements smaller than the pivot and the elements larger than the pivot. These array parts are sorted again in a recursive style. If an array is empty or only contains one element it is already sorted.
