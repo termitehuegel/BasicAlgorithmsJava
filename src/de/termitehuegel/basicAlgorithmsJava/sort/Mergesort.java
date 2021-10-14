@@ -9,6 +9,7 @@ public class Mergesort implements SortingAlgorithm{
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck, length-check
         if (array == null || array.length < 2) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         //sorts the whole array
@@ -18,6 +19,7 @@ public class Mergesort implements SortingAlgorithm{
     public <T extends Comparable<T>> void sort(T[] array, int begin, int end) {
         //nullcheck, length-check
         if (array == null || array.length < 2 || end-begin < 1) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
 
@@ -69,6 +71,7 @@ public class Mergesort implements SortingAlgorithm{
     public void sort(int[] array) {
         //nullcheck, length-check
         if (array == null || array.length < 2) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         //sorts the whole array
@@ -78,6 +81,7 @@ public class Mergesort implements SortingAlgorithm{
     public void sort(int[] array, int begin, int end) {
         //nullcheck, length-check
         if (array == null || array.length < 2 || end-begin < 1) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
 

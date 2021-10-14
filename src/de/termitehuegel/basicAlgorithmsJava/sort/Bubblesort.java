@@ -9,6 +9,7 @@ public class Bubblesort implements SortingAlgorithm{
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         //for every element
@@ -30,6 +31,7 @@ public class Bubblesort implements SortingAlgorithm{
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         //for every element

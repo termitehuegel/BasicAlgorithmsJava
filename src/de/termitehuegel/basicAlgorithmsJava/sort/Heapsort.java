@@ -7,6 +7,7 @@ public class Heapsort implements SortingAlgorithm{
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         //heapifies the whole array
@@ -64,6 +65,7 @@ public class Heapsort implements SortingAlgorithm{
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         //heapifies the whole array

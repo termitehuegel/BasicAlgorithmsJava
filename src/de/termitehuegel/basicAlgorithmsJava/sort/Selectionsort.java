@@ -9,6 +9,7 @@ public class Selectionsort implements SortingAlgorithm{
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         //for half of all elements
@@ -44,6 +45,7 @@ public class Selectionsort implements SortingAlgorithm{
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         //for half of all elements

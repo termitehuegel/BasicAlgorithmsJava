@@ -10,6 +10,7 @@ public class Insertionsort implements SortingAlgorithm{
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         //for every element besides the first
@@ -34,6 +35,7 @@ public class Insertionsort implements SortingAlgorithm{
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         //for every element besides the first
