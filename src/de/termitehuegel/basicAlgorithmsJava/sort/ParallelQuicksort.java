@@ -38,6 +38,7 @@ public class ParallelQuicksort<T extends Comparable<T>> extends Thread{
 
     private void sort() throws InterruptedException {
         //finished if less than 2 Elements need to be sorted (-> 1 or 0) and nullcheck
+        //returns without sorting because null can be seen as sorted
         if (array != null && begin < end) {
             //get position of a pivot and sort the rest left if it's lower and right if it's bigger
             int pivotIndex = findPivot();

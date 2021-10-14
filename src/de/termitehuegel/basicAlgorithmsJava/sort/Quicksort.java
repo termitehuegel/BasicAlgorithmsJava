@@ -10,6 +10,7 @@ public class Quicksort implements SortingAlgorithm{
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         sort(array, 0, array.length-1);
@@ -57,6 +58,7 @@ public class Quicksort implements SortingAlgorithm{
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {
+            //returns without sorting because null can be seen as sorted
             return;
         }
         sort(array, 0, array.length-1);
