@@ -2,7 +2,6 @@
 This repository will contain all sorts of different algorithms as a Java implementation.
 ## Content
 ### Sorting Algorithms
-#### TEST // WILL BE REMOVED SOON //
 #### [Bubble Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Bubblesort.java)
 Bubble sort works by iterating through the array and always comparing two elements. If the element on the left is larger than they are swapped. For each iteration the largest element will end up at the end of the not sorted part. In the next iteration this part does not need to be checked.
 #### [Heap Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Heapsort.java)
