@@ -1,4 +1,4 @@
-package de.termitehuegel.basicAlgorithmsJava.math;
+package de.termitehuegel.basicAlgorithmsJava.math.numberTheory;
 
 /**
  * @author termitehuegel
