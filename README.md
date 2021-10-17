@@ -19,6 +19,8 @@ Insertions sort works by dividing the array in two parts. The sorted part and a 
 Merge sort works by dividing and conquering. Firstly the array is split in two. The left and the right side are now sorted recursively. An array with less than two elements is already sorted. The two sorted sub-arrays are then merged. In this process the first elements of the array are compared against each other. The smaller element gets added to the result array and removed from the sub-array. This process is repeated until both sub-arrays are empty. This result-array itself will then be merged with a corresponding array. This is repeated until all sub-arrays are merged into one array.
 #### [Selection Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Selectionsort.java)
 Selection sort works by iterating through the array and finding the smallest/largest or both element. These elements get shifted to the beginning/end of the part of the array that is to be sorted.
+#### [Swap Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Swapsort.java)
+Swapsort swaps every element with its position. Its position is determined by counting the elements that are smaller. Swap sort thereby only works for arrays without duplicates.
 #### [Parallel Quick Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/ParallelQuicksort.java)
 Parallel quick sort is an implementation of quick sort that relies on multithreading. Each recursive call of quick sort thereby opens a new Thread.
 #### [Quick Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Quicksort.java)
