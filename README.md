@@ -21,6 +21,8 @@ Merge sort works by dividing and conquering. Firstly the array is split in two. 
 Selection sort works by iterating through the array and finding the smallest/largest or both element. These elements get shifted to the beginning/end of the part of the array that is to be sorted.
 #### [Swap Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Swapsort.java)
 Swapsort swaps every element with its position. Its position is determined by counting the elements that are smaller. Swap sort thereby only works for arrays without duplicates.
+#### [Tree Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/BinaryTreeSort.java)
+Binary tree sort works by utilising the binary tree structure. Every node has a value and two children. From a root sort all elements as following: Elements smaller than the element are left children an elements that are larger are right children. By starting from the rightmost child and ending at the leftmost child the elements can be read out as sorted.
 #### [Parallel Quick Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/ParallelQuicksort.java)
 Parallel quick sort is an implementation of quick sort that relies on multithreading. Each recursive call of quick sort thereby opens a new Thread.
 #### [Quick Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Quicksort.java)
