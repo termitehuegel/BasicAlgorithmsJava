@@ -3,9 +3,8 @@ package de.termitehuegel.basicAlgorithmsJava.sort;
 /**
  * @author termitehuegel
  */
-public class Bubblesort implements SortingAlgorithm{
+public class Bubblesort{
 
-    @Override
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
@@ -27,7 +26,6 @@ public class Bubblesort implements SortingAlgorithm{
         }
     }
 
-    @Override
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {

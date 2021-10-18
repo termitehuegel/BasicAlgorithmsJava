@@ -3,10 +3,8 @@ package de.termitehuegel.basicAlgorithmsJava.sort;
 /**
  * @author termitehuegel
  */
-public class Insertionsort implements SortingAlgorithm{
+public class Insertionsort{
 
-
-    @Override
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
@@ -30,8 +28,6 @@ public class Insertionsort implements SortingAlgorithm{
         }
     }
 
-
-    @Override
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {

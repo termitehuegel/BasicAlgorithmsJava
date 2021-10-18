@@ -3,7 +3,7 @@ package de.termitehuegel.basicAlgorithmsJava.sort;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BinaryTreeSort implements SortingAlgorithm {
+public class BinaryTreeSort {
 
     private static class Node<T> {
         private final T value;
@@ -45,7 +45,6 @@ public class BinaryTreeSort implements SortingAlgorithm {
         }
     }
 
-    @Override
     public <T extends Comparable<T>> void sort(T[] array) {
         //list to save the result
         List<T> result = new ArrayList<>();
@@ -63,7 +62,6 @@ public class BinaryTreeSort implements SortingAlgorithm {
         }
     }
 
-    @Override
     public void sort(int[] array) {
         //converts the primitive int array to an Integer array
         Integer[] tempArray = new Integer[array.length];

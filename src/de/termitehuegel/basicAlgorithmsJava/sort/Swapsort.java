@@ -5,8 +5,7 @@ import java.util.Arrays;
 /**
  * @author termitehuegel
  */
-public class Swapsort implements SortingAlgorithm{
-    @Override
+public class Swapsort{
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
@@ -37,7 +36,6 @@ public class Swapsort implements SortingAlgorithm{
         }
     }
 
-    @Override
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {

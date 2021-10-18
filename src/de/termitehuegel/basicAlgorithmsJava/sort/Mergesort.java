@@ -4,8 +4,8 @@ package de.termitehuegel.basicAlgorithmsJava.sort;
 /**
  * @author termitehuegel
  */
-public class Mergesort implements SortingAlgorithm{
-    @Override
+public class Mergesort{
+
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck, length-check
         if (array == null || array.length < 2) {
@@ -67,7 +67,6 @@ public class Mergesort implements SortingAlgorithm{
         System.arraycopy(temp, 0, array, start, temp.length);
     }
 
-    @Override
     public void sort(int[] array) {
         //nullcheck, length-check
         if (array == null || array.length < 2) {

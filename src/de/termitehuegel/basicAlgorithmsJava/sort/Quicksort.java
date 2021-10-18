@@ -3,10 +3,8 @@ package de.termitehuegel.basicAlgorithmsJava.sort;
 /**
  * @author termitehuegel
  */
-public class Quicksort implements SortingAlgorithm{
+public class Quicksort {
 
-
-    @Override
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
@@ -54,7 +52,6 @@ public class Quicksort implements SortingAlgorithm{
     }
 
 
-    @Override
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {
