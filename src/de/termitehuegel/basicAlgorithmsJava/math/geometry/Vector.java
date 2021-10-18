@@ -14,7 +14,7 @@ public class Vector {
     private final double[] coordinates;
 
     public Vector(double[] coordinates) {
-        //nullcheck
+        //Nullcheck
         if (coordinates == null) {
             //a vector needs coordinates
             throw new IllegalArgumentException("Coordinates can't be null.");
