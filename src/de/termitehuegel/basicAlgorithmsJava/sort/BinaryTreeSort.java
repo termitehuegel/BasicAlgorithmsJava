@@ -46,6 +46,10 @@ public class BinaryTreeSort {
     }
 
     public <T extends Comparable<T>> void sort(T[] array) {
+        //Nullcheck
+        if (array == null) {
+            throw new IllegalArgumentException("array can't be null");
+        }
         //list to save the result
         List<T> result = new ArrayList<>();
         //start node
@@ -63,6 +67,10 @@ public class BinaryTreeSort {
     }
 
     public void sort(int[] array) {
+        //Nullcheck
+        if (array == null) {
+            throw new IllegalArgumentException("array can't be null");
+        }
         //converts the primitive int array to an Integer array
         Integer[] tempArray = new Integer[array.length];
         for (int i=0; i<array.length; i++) {
