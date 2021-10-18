@@ -1,9 +1,8 @@
-package de.termitehuegel.basicAlgorithmsJava.sort;
+package de.termitehuegel.basicAlgorithmsJava.array.sort;
 
 
-public class Heapsort implements SortingAlgorithm{
+public class Heapsort{
 
-    @Override
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
@@ -60,8 +59,6 @@ public class Heapsort implements SortingAlgorithm{
         }
     }
 
-
-    @Override
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {

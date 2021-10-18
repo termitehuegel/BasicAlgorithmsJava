@@ -1,11 +1,10 @@
-package de.termitehuegel.basicAlgorithmsJava.sort;
+package de.termitehuegel.basicAlgorithmsJava.array.sort;
 
 /**
  * @author termitehuegel
  */
-public class Selectionsort implements SortingAlgorithm{
+public class Selectionsort{
 
-    @Override
     public <T extends Comparable<T>> void sort(T[] array) {
         //nullcheck
         if (array == null) {
@@ -41,7 +40,6 @@ public class Selectionsort implements SortingAlgorithm{
         }
     }
 
-    @Override
     public void sort(int[] array) {
         //nullcheck
         if (array == null) {

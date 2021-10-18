@@ -1,5 +1,7 @@
 package de.termitehuegel.basicAlgorithmsJava.math.geometry;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 
 /**
@@ -12,7 +14,7 @@ public class Vector {
     private final double[] coordinates;
 
     public Vector(double[] coordinates) {
-        //nullcheck
+        //Nullcheck
         if (coordinates == null) {
             //a vector needs coordinates
             throw new IllegalArgumentException("Coordinates can't be null.");
@@ -25,12 +27,7 @@ public class Vector {
         this.coordinates = coordinates;
     }
 
-    public void addVector(Vector vector) {
-        //nullcheck
-        if (vector == null) {
-            //can't add null to a vector
-            throw new IllegalArgumentException("Vector can't be null.");
-        }
+    public void addVector(@NotNull Vector vector) {
         //length-check
         if (vector.coordinates.length != coordinates.length) {
             //vectors that are added to each other need the same number of dimensions
@@ -52,18 +49,13 @@ public class Vector {
     public double magnitude() {
         double result = 0;
         //calculates the magnitude |a| = sqrt(a1^2 + a2^2 + ... + an^2)
-        for (int i=0; i<coordinates.length; i++) {
-            result += Math.pow(coordinates[i], 2);
+        for (double coordinate : coordinates) {
+            result += Math.pow(coordinate, 2);
         }
         return Math.sqrt(result);
     }
 
-    public double scalarProduct(Vector vector) {
-        //nullcheck
-        if (vector == null) {
-            //can't multiply a vector with null
-            throw new IllegalArgumentException("Vector can't be null.");
-        }
+    public double scalarProduct(@NotNull Vector vector) {
         //length-check
         if (vector.coordinates.length != coordinates.length) {
             //can't multiply vectors with a different number of dimensions
@@ -77,17 +69,12 @@ public class Vector {
         return result;
     }
 
-    public boolean isOrthogonal(Vector vector) {
+    public boolean isOrthogonal(@NotNull Vector vector) {
         //a and b are orthogonal if their scalar product is 0
         return 0 == scalarProduct(vector);
     }
 
-    public boolean isCollinear(Vector vector) {
-        //nullcheck
-        if (vector == null) {
-            //can't decide if null is collinear to any vector
-            throw new IllegalArgumentException("Vector can't be null.");
-        }
+    public boolean isCollinear(@NotNull Vector vector) {
         //length-check
         if (vector.coordinates.length != coordinates.length) {
             //can't compare vectors with different dimensions
@@ -104,12 +91,7 @@ public class Vector {
         return true;
     }
 
-    public double angle(Vector vector) {
-        //nullcheck
-        if (vector == null) {
-            //can't decide if null is collinear to any vector
-            throw new IllegalArgumentException("Vector can't be null.");
-        }
+    public double angle(@NotNull Vector vector) {
         //length-check
         if (vector.coordinates.length != coordinates.length) {
             //can't compare vectors with different dimensions
