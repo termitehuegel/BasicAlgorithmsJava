@@ -11,6 +11,8 @@ Vectors are used to describe a displacement in space. A vector allows for all ki
 ### Sorting Algorithms
 #### [Bubble Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Bubblesort.java)
 Bubble sort works by iterating through the array and always comparing two elements. If the element on the left is larger than they are swapped. For each iteration the largest element will end up at the end of the not sorted part. In the next iteration this part does not need to be checked.
+#### [Counting Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Countingsort.java)
+Counting sort is used to sort an int array. It is known that all numbers in the int array are element of an interval which is limited by `lowerBound` and `upperBound`. The algorithm counts the frequency of every element and builds a new array which is sorted.
 #### [Heap Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Heapsort.java)
 The heap sort algorithm makes use of the heap data structure. Out of the array a max-heap is generated. Then the root of the heap is swapped with the last element of the array. This last element is now a part of the sorted part of the array. This procedure is repeated for every element in the array.
 #### [Insertions Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Insertionsort.java)
