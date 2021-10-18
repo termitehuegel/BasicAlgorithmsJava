@@ -1,4 +1,4 @@
-package de.termitehuegel.basicAlgorithmsJava.sort;
+package de.termitehuegel.basicAlgorithmsJava.array.sort;
 
 import java.util.ArrayList;
 import java.util.List;

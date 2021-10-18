@@ -1,6 +1,4 @@
-package de.termitehuegel.basicAlgorithmsJava.sort;
-
-import java.util.Arrays;
+package de.termitehuegel.basicAlgorithmsJava.array.sort;
 
 /**
  * @author termitehuegel
