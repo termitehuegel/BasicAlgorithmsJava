@@ -8,6 +8,11 @@ The advanced euclidean algorithm is used to solve diophantine equations of the f
 The euclidean Algorithm is used to calculate the largest common divisor of `a` and `b`. a and b therefore need to be positive integers. The functionality of the euclidean algorithm is very simple. If `b` is 0 than `a` is the largest common divisor. Else the largest common divisor is the same as the largest common divisor of `b` and `a` modulo `b`. This largest common divisor can be calculated with the euclidean algorithm.
 ##### [Vector](/src/de/termitehuegel/basicAlgorithmsJava/math/geometry/Vector.java)
 Vectors are used to describe a displacement in space. A vector allows for all kinds of operations.
+### Search Algorithms
+#### [Binary Search](/src/de/termitehuegel/basicAlgorithmsJava/array/search/BinarySearch.java)
+The binary search algorithm searches through a sorted array. Begin by comparing the element in the middle with the element that is searched. If the element is larger repeat for that part. If the element is smaller thant repeat for the smaller part.
+#### [Sequential Search](/src/de/termitehuegel/basicAlgorithmsJava/array/search/SequentialSearch.java)
+Iterate through the array and return if the element is found. If the element isn't found return -1.
 ### Sorting Algorithms
 #### [Bubble Sort](/src/de/termitehuegel/basicAlgorithmsJava/array/sort/Bubblesort.java)
 Bubble sort works by iterating through the array and always comparing two elements. If the element on the left is larger than they are swapped. For each iteration the largest element will end up at the end of the not sorted part. In the next iteration this part does not need to be checked.
