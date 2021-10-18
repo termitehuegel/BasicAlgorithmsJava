@@ -7,9 +7,13 @@ package de.termitehuegel.basicAlgorithmsJava.sort;
 public class Countingsort{
 
     public void sort(int[] array, int lowerBound, int upperBound) {
-        //Nullcheck and check if interval contains numbers
-        if (array == null || lowerBound>=upperBound) {
-            throw new IllegalArgumentException("array can't be null, lowerBound must be smaller than upperBound.");
+        //Nullcheck
+        if (array == null) {
+            return;
+        }
+        //Check if interval contains numbers
+        if (lowerBound>=upperBound) {
+            throw new IllegalArgumentException("lowerBound must be smaller than upperBound.");
         }
         //temporary array => will store the count of every element
         int[] temp = new int[upperBound-lowerBound];
