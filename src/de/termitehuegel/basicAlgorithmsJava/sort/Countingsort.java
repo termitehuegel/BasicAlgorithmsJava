@@ -36,4 +36,34 @@ public class Countingsort{
             }
         }
     }
+
+    public void sortDigit(int[] array, int exponent) {
+        //Nullcheck
+        if (array == null) {
+            return;
+        }
+        //temporary array => will store the count of every element
+        int[] temp = new int[10];
+        int[] result = new int[array.length];
+        //counts digits
+        for (int number : array) {
+            //count digit
+            temp[(int) (number/Math.pow(10,exponent) % 10)]++;
+        }
+        //accumulation phase => temp[i] now holds the last index for a digit
+        for (int i = 1; i < 10; i++) {
+            temp[i] += temp[i - 1];
+        }
+
+        //for every element starting from behind
+        for (int i = array.length - 1; i >= 0; i--) {
+            //set the result for the corresponding element
+            result[temp[(int) ((array[i] / Math.pow(10,exponent)) % 10)] - 1] = array[i];
+            //digit count for this digit is reduced
+            temp[(int) ((array[i] / Math.pow(10,exponent)) % 10)]--;
+        }
+
+        //replace the input array with the result
+        System.arraycopy(result, 0, array, 0, array.length);
+    }
 }

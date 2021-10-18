@@ -19,6 +19,8 @@ The heap sort algorithm makes use of the heap data structure. Out of the array a
 Insertions sort works by dividing the array in two parts. The sorted part and a not sorted part. In the beginning the sorted part just contains the first element of the array. Now for every following element all elements, that are in the sorted part of the array and are larger get shifted right. Now the element gets inserted in the sorted part.
 #### [Merge Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Mergesort.java)
 Merge sort works by dividing and conquering. Firstly the array is split in two. The left and the right side are now sorted recursively. An array with less than two elements is already sorted. The two sorted sub-arrays are then merged. In this process the first elements of the array are compared against each other. The smaller element gets added to the result array and removed from the sub-array. This process is repeated until both sub-arrays are empty. This result-array itself will then be merged with a corresponding array. This is repeated until all sub-arrays are merged into one array.
+#### [Radix Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Radixsort.java)
+Sorts int arrays by using counting sort. It starts by sorting the array by the first digit. Then it repeats this with the second, third, ... digit.
 #### [Selection Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Selectionsort.java)
 Selection sort works by iterating through the array and finding the smallest/largest or both element. These elements get shifted to the beginning/end of the part of the array that is to be sorted.
 #### [Swap Sort](/src/de/termitehuegel/basicAlgorithmsJava/sort/Swapsort.java)
