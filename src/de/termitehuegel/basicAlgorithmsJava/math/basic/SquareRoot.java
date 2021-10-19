@@ -5,30 +5,34 @@ package de.termitehuegel.basicAlgorithmsJava.math.basic;
  */
 public class SquareRoot {
 
-    public double squareRoot(double a, double currentGuess) {
-        if (a < 0) {
+    public double squareRoot(final double radicant) {
+        return root(radicant, 2);
+    }
+
+    public double root(final double radicant, final int exponent) {
+        return root(radicant, exponent, radicant);
+    }
+
+    public double root(final double radicand, final int exponent, final double currentGuess) {
+        if (radicand < 0) {
             return Double.NaN;
         }
-        //sqrt(0) = 0
-        if (a == 0) {
+        if (radicand == 0) {
             return 0;
         }
-        //newton approximation for 0=x^2-a => is true when x=sqrt(a)
-        double newGuess = currentGuess - (currentGuess*currentGuess-a) / (2*currentGuess);
+        final Power pow = new Power();
+        //newton approximation for 0=x^ex-a => is true when x=a^(1/ex)
+        final double newGuess = currentGuess - (pow.power(currentGuess, exponent)-radicand) / (exponent*pow.power(currentGuess, exponent-1));
         //if there has been large enough change => make another approximation
-        if (currentGuess - newGuess >= Double.MIN_VALUE && a >1) {
-            return squareRoot(a, newGuess);
+        if (currentGuess - newGuess >= Double.MIN_VALUE && radicand >1) {
+            return root(radicand, exponent, newGuess);
         }
-        if (newGuess - currentGuess >= Double.MIN_VALUE && a < 1) {
-            return squareRoot(a, newGuess);
+        //if there has been large enough change => make another approximation
+        if (newGuess - currentGuess >= Double.MIN_VALUE && radicand < 1) {
+            return root(radicand,exponent, newGuess);
         }
 
         //approximation is close enough
         return newGuess;
     }
-
-    public double squareRoot(double a) {
-        return squareRoot(a, a);
-    }
-
 }
