@@ -2,7 +2,6 @@ package de.termitehuegel.basicAlgorithmsJava.array.sort;
 
 import java.util.ArrayList;
 import java.util.List;
-
 public class BinaryTreeSort {
 
     private static class Node<T> {
@@ -55,8 +54,8 @@ public class BinaryTreeSort {
         //start node
         Node<T> node = new Node<T>(array[0]);
         //insert every element in the corresponding node
-        for(T element : array){
-            insert(node, element);
+        for(int i=1; i<array.length; i++) {
+            insert(node, array[i]);
         }
         //order the nodes => result is saved in result
         inOrder(node, result);
