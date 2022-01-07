@@ -3,7 +3,7 @@ This repository will contain all sorts of different algorithms as a Java impleme
 ## Content
 ### Binary
 #### [Hamming Weight](/src/de/termitehuegel/basicAlgorithmsJava/binary/HammingWeight.java)
-The hamming weight is the number of set bits (bits set to `1`) in a String of bits represented in an `int`. The method `getHammingWeight(int x)` calculates the hamming weight of `x`. The class also contains the `getHammingDistance(int x, int y)` that calculates the number of bits that are different in `x` and `y`.
+The hamming weight is the number of set bits (bits set to `1`) in a String of bits represented in an `int`. The method `getHammingWeight(int x)` calculates the hamming weight of `x`. The class also contains the `getHammingDistance(int x, int y)` that calculates the number of bits that are different in `x` and `y`. The methods are partly also applicable to `long` and`byte[]` datatypes.
 ### Math
 #### [Advanced Euclidean Algorithm](/src/de/termitehuegel/basicAlgorithmsJava/math/numberTheory/AdvancedEuclideanAlgorithm.java)
 The advanced euclidean algorithm is used to solve diophantine equations of the following form: `s*a+t*b=ggT(a, b)` with known `a` and `b`. The algorithm like the euclidean algorithm but at the end each row is solved for t with s being the t from the next row. The last row has the form `a=ggT(a, b)`, `b=0`, `s=1`, `t=0`.
